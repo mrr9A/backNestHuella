@@ -12,6 +12,7 @@ async function compareFingerprints(image1Base64: string, image2Base64: string): 
     sharp(image1Buffer).resize(256, 256).raw().toBuffer(),
     sharp(image2Buffer).resize(256, 256).raw().toBuffer(),
   ]);
+  
 
   if (image1.length !== image2.length) {
     throw new Error('Las imágenes no tienen el mismo tamaño después del procesamiento.');
